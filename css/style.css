@@ -265,6 +265,27 @@ body::after {
   flex-direction: column;
   gap: 20px
 }
+.modal__text {
+  text-align: center;
+  line-height: 1.25;
+  font-weight: 500;
+  font-size: 18px
+}
+@media(any-hover:hover) {
+  .modal__text a:hover {
+    text-decoration: underline
+  }
+}
+.modal__text img {
+  width: 100px;
+  vertical-align: middle;
+  transition: .2s ease-in-out
+}
+@media(any-hover:hover) {
+  .modal__text img:hover {
+    scale: 1.05
+  }
+}
 .modal-contaсt__label {
   font-weight: 500;
   margin-bottom: 8px
@@ -393,15 +414,20 @@ body::after {
   left: 0;
   top: 0;
   width: 100%;
-  padding: 10px 0;
+  padding: 10px 15px;
   z-index: 20
 }
 .header__inner {
   display: flex;
-  align-items: center
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between
 }
 .header__menu {
-  flex: 1
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center
 }
 .header__contact::before {
   display: inline-block;
@@ -506,16 +532,25 @@ body::after {
   height: calc(var(--vh,1vh)*100);
   max-height: 1070px;
   padding-top: 10vh;
-  position: relative
+  position: relative;
+  max-width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center
 }
 .hero__title {
   text-transform: uppercase;
   font-family: Oswald,sans-serif;
-  font-size: 170px;
+  font-size: 250px;
   font-weight: 700;
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none
+}
+@media(max-width:1720px) {
+  .hero__title {
+    font-size: 13vw
+  }
 }
 .hero__title>div {
   display: flex;
@@ -528,10 +563,11 @@ body::after {
 }
 .hero__decor {
   position: absolute;
-  left: 41%;
+  left: 45%;
   translate: -50% 0;
   bottom: 0;
   width: 47%;
+  max-width: 550px;
   aspect-ratio: 430/550;
   pointer-events: none
 }
@@ -606,7 +642,7 @@ body::after {
 .choose__cards {
   display: grid;
   grid-template-columns: repeat(3,1fr);
-  gap: 20px
+  gap: 50px 20px
 }
 .choose-card {
   border-radius: 50px;
@@ -614,7 +650,22 @@ body::after {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  padding: 30px
+  padding: 50px 30px 30px;
+  position: relative
+}
+.choose-card__icon {
+  aspect-ratio: 1/1;
+  background-color: #fd6036;
+  border-radius: 50%;
+  width: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  translate: -50% -50%
 }
 .choose-card h4 {
   text-transform: uppercase;
@@ -630,6 +681,10 @@ body::after {
 .choose-card:first-child,
 .choose-card:last-child {
   background-color: #fd6036
+}
+.choose-card:first-child .choose-card__icon,
+.choose-card:last-child .choose-card__icon {
+  background-color: #fff
 }
 .collection .section-title {
   text-align: center;
@@ -660,18 +715,25 @@ body::after {
 }
 .collection-card {
   position: relative;
-  border-radius: 20px;
   overflow: hidden;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  aspect-ratio: 280/400;
   font-family: Oswald,sans-serif;
   text-transform: uppercase;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 8px
+  justify-content: space-between
+}
+.collection-card__img {
+  border-radius: 20px;
+  position: relative;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  margin-bottom: 20px
+}
+.collection-card__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover
 }
 .collection-card__price {
   margin-left: auto;
@@ -682,13 +744,13 @@ body::after {
   font-size: 20px
 }
 .collection-card__body {
-  background-color: #fff;
   padding: 10px;
   border-radius: 20px
 }
 .collection-card__title {
-  font-size: 32px;
-  font-weight: 700
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center
 }
 .collection-card__layout {
   display: flex;
@@ -716,16 +778,60 @@ body::after {
 .slider {
   background-color: #000
 }
+.slider__container {
+  position: relative
+}
 .slider .section-title {
   text-align: center
+}
+.slider .swiper-button-next,
+.slider .swiper-button-prev {
+  position: absolute;
+  width: 40px;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  border: 1px solid #fff;
+  top: calc(50% - 20px);
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+.slider .swiper-button-next::after,
+.slider .swiper-button-prev::after {
+  display: inline-block;
+  content: "";
+  aspect-ratio: 1/1;
+  width: 80%;
+  -webkit-mask: url(../img/icons/chevron-arrow.svg) center/contain no-repeat;
+  mask: url(../img/icons/chevron-arrow.svg) center/contain no-repeat;
+  background-color: #fff
+}
+.slider .swiper-button-prev {
+  scale: -1 1;
+  left: -15px
+}
+.slider .swiper-button-next {
+  right: -15px
 }
 .slider-swiper {
   padding: 10px 0!important;
   margin: -10px 0
 }
+.slider-swiper .swiper-slide.swiper-slide-next .slide__text {
+  opacity: 1
+}
 .slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px
+}
+.slide__img {
+  overflow: hidden;
   border-radius: 20px;
-  overflow: hidden
+  aspect-ratio: 4/3
 }
 .slide img,
 .slide picture {
@@ -733,6 +839,11 @@ body::after {
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover
+}
+.slide__text {
+  color: #fff;
+  opacity: 0;
+  transition: .2s ease-in-out
 }
 .reviews {
   background-color: #000
