@@ -2,510 +2,664 @@
 <html lang="en">
 
 <head>
-	<title>Main</title>
-	<meta charset="UTF-8">
-	<meta name="format-detection" content="telephone=no">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap&_v=20250403122902" rel="stylesheet">
+	<title>HomePage</title>
+	<meta charset="UTF-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@0,100..900;1,100..900&display=swap&_v=20250404221333" rel="stylesheet" />
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20250403122902">
-	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250404221333" />
+	<link rel="shortcut icon" href="favicon.ico" />
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body>
 	<div class="wrapper">
 		<header class="header">
-			<!-- <div class="header__container"> -->
-			<div class="header__inner">
-				<a href="#" class="header__logo"><img src="img/logo.svg" alt="" /></a>
-				<div class="header__menu menu">
-					<button type="button" class="menu__icon icon-menu">
-						<span></span>
-					</button>
-					<nav class="menu__body">
-						<ul class="menu__list">
-							<li class="menu__item">
-								<a href="#choose" class="menu__link">Етапи Виробництва</a>
-							</li>
-							<li class="menu__item">
-								<a href="#catalog" class="menu__link">Каталог</a>
-							</li>
-							<li class="menu__item">
-								<a href="#gallery" class="menu__link">Галерея</a>
-							</li>
-							<li class="menu__item">
-								<a href="#reviews" class="menu__link">Вiдгуки</a>
-							</li>
-						</ul>
-					</nav>
-				</div>
-				<div class="header__actions">
-					<button class="header__contact button" type="button" data-popup="#contact-modal">Контакти</button>
+			<div class="header__container">
+				<div class="header__inner">
+					<a href="#" class="header__logo"><img src="img/logo.svg" alt="logo" /></a>
+					<div class="header__menu menu">
+						<button type="button" class="menu__icon icon-menu">
+							<span></span>
+						</button>
+						<nav class="menu__body">
+							<ul class="menu__list">
+								<li class="menu__item">
+									<a href="#steps" class="menu__link">ЕТАПИ ВИРОБНИЦТВА</a>
+								</li>
+								<li class="menu__item">
+									<a href="#catalog" class="menu__link">КАТАЛОГ</a>
+								</li>
+								<li class="menu__item">
+									<a href="#gallery" class="menu__link">ГАЛЕРЕЯ</a>
+								</li>
+								<li class="menu__item">
+									<a href="#reviews" class="menu__link">ВІДГУКИ</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<div class="header__actions">
+						<a href="tel:+">+380 77 777 77 77</a>
+						<button class="header__callback" type="button" data-popup="#popup">
+							ЗВ’ЯЖІТЬСЯ З НАМИ
+						</button>
+					</div>
 				</div>
 			</div>
-			<!-- </div> -->
 		</header>
 
 		<main class="page">
-			<section class="hero" style="background-image: url('img/hero-bg.webp')">
-				<!-- <div class="hero__container"> -->
-				<div class="hero__inner">
-					<h1 class="hero__title">
-						find your true
-						<div>style <span>here</span></div>
-					</h1>
-					<div class="hero__decor">
-						<img src="img/hero-girl.webp" alt="girl" />
-					</div>
-					<a href="#choose" class="hero__scroll">
-						Гортай вниз
-						<span></span>
-					</a>
-					<button type="button" data-popup="#order-modal" class="hero__btn">
-						замовити
-					</button>
-				</div>
-				<!-- </div> -->
-			</section>
-
-			<section class="choose" id="choose">
-				<div class="choose__container">
-					<div class="choose__inner">
-						<div class="section-head">
-							<h2 class="section-title">Етапи Виробництва</h2>
-						</div>
-						<div class="choose__cards">
-							<div class="choose-card">
-								<div class="choose-card__icon">
-									<img src="img/icon.svg" alt="icon" />
-								</div>
-								<h4>Розробка концепції та дизайну</h4>
-								<p>
-									На цьому етапі визначається ідея мерчу: що саме це буде (футболки,
-									худі, кепки тощо), кольори, тематика (наприклад, рік випуску,
-									символіка школи чи університету).
-								</p>
-							</div>
-							<div class="choose-card">
-								<div class="choose-card__icon">
-									<img src="img/icon.svg" alt="icon" />
-								</div>
-								<h4>Вибір матеріалів і постачальників</h4>
-								<p>
-									Вибирається тип тканини (бавовна, поліестер, суміш), розміри одягу
-									та якість пошиття залежно від бюджету й потреб.
-								</p>
-							</div>
-							<div class="choose-card">
-								<div class="choose-card__icon">
-									<img src="img/icon.svg" alt="icon" />
-								</div>
-								<h4>Створення прототипу</h4>
-								<p>
-									Виготовляється тестовий зразок одягу з обраним дизайном. Це дозволяє
-									перевірити, як виглядає малюнок на тканині, чи зручний крій, і
-									внести корективи.
-								</p>
-							</div>
-							<div class="choose-card">
-								<div class="choose-card__icon">
-									<img src="img/icon.svg" alt="icon" />
-								</div>
-								<h4>Збір замовлень</h4>
-								<p>
-									Організовується процес прийому заявок від випускників: хто що хоче
-									(розмір, модель), у якій кількості
-								</p>
-							</div>
-							<div class="choose-card">
-								<div class="choose-card__icon">
-									<img src="img/icon.svg" alt="icon" />
-								</div>
-								<h4>Виробництво та друк</h4>
-								<p>
-									Починається масове пошиття одягу та нанесення дизайну (трафаретний
-									друк, вишивка, термоперенос тощо).
-								</p>
-							</div>
-							<div class="choose-card">
-								<div class="choose-card__icon">
-									<img src="img/icon.svg" alt="icon" />
-								</div>
-								<h4>Доставка</h4>
-								<p>
-									Готовий мерч доставляється організаторам (наприклад, до школи чи
-									університету), після чого роздається випускникам
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section class="collection" id='catalog'>
-				<div class="collection__container">
-					<div class="section-head">
-						<h2 class="section-title">каталог</h2>
-					</div>
-					<div class="collection__body">
-						<div class="collection__cards">
-							<div class="collection-card">
-								<div class="collection-card__img" data-popup="#order-modal">
-									<img src="img/merch.webp" alt="img" />
-									<div class="collection-card__layout">
-										<span class="button button--md">Замовити</span>
-									</div>
-								</div>
-								<div class="collection-card__body">
-									<h5 class="collection-card__title">aura shawl collar blazer</h5>
-								</div>
-							</div>
-							<div class="collection-card">
-								<div class="collection-card__img" data-popup="#order-modal">
-									<img src="img/merch.webp" alt="img" />
-									<div class="collection-card__layout">
-										<span class="button button--md">Замовити</span>
-									</div>
-								</div>
-								<div class="collection-card__body">
-									<h5 class="collection-card__title">aura shawl collar blazer</h5>
-								</div>
-							</div>
-
-							<div class="collection-card">
-								<div class="collection-card__img" data-popup="#order-modal">
-									<img src="img/merch.webp" alt="img" />
-									<div class="collection-card__layout">
-										<span class="button button--md">Замовити</span>
-									</div>
-								</div>
-								<div class="collection-card__body">
-									<h5 class="collection-card__title">aura shawl collar blazer</h5>
-								</div>
-							</div>
-
-						</div>
-
-						<div class="collection__text">
-							<img src="img/icons/flower.svg" alt="icon">
+			<section class="hero">
+				<div class="hero__container">
+					<div class="hero__inner">
+						<h1 class="hero__title">
+							<img src="img/decor.svg" alt="decor" />
+							ЗНАЙДИ СВІЙ
+							<div>СТИЛЬ <span>ТУТ</span></div>
+						</h1>
+						<div class="hero__text">
 							<p>
-								<b>IMPORTANT: </b> sit amet consectetur adipisicing elit. Voluptas
-								sapiente ratione sed impedit quae debitis, incidunt enim aspernatur
-								voluptates corrupti velit saepe sint minus vero fuga neque, totam
-								voluptatibus ipsum.
+								НОВА ЛІТНЯ КОЛЕКЦІЯ! <br />
+								ВПЕРЕД! ОТРИМАЙ ЦЕ ЗАРАЗ!
 							</p>
 						</div>
+						<div class="hero__girl"><img src="img/hero-girl.webp" alt="girl" /></div>
+						<div class="hero__scroll">
+							ГОРТАЙ ВНИЗ
+							<div class="scroll-down">
+								<div class="scroll-down__mouse">
+									<div class="scroll-down__scroller"></div>
+								</div>
+							</div>
+						</div>
+						<button class="hero__order" type="button" data-popup="#popup">ЗАМОВИТИ ЗАРАЗ</button>
 					</div>
 				</div>
 			</section>
 
-			<section class="slider" id='gallery'>
-				<div class="slider__container">
-					<div class="section-head">
-						<h2 class="section-title">Галерея</h2>
-					</div>
-					<div class="slider-swiper swiper">
-						<div class="swiper-wrapper">
-							<div class="swiper-slide">
-								<div class="slide">
-									<div class="slide__img">
-										<img src="img/gallery/gallery-1.webp" alt="merch" />
+			<div class="page__decor-wrapper">
+				<section class="steps" id='steps'>
+					<div class="steps__container">
+						<div class="steps__inner">
+							<div class="steps__head">
+								<div class="steps__line">
+									<div class="steps__block">
+										<div class="steps__decors">
+											<img src="img/star.svg" alt="star" />
+											<img src="img/star.svg" alt="star" />
+										</div>
+										<div class="steps__text">
+											<p>
+												Створення якісного продукту передбачає виокнання наступних
+												етапів.
+											</p>
+										</div>
 									</div>
-									<div class="slide__text">
-										<p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+									<div class="steps__title">ЕТАПИ</div>
+								</div>
+								<div class="steps__title">ВИРОБНИЦТВА</div>
+							</div>
+							<div class="steps__cards">
+								<div class="step-card">
+									<div class="step-card__title">РОЗРОБКА КОНЦЕПЦІЇ <br> ТА ДИЗАЙНУ</div>
+									<div class="step-card__text">
+										<p>
+											На цьому етапі визначається ідея мерчу: що саме це буде (футболки,
+											худі, кепки тощо), кольори, тематика (наприклад, рік випуску,
+											символіка школи чи університету).
+										</p>
 									</div>
 								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="slide">
-									<div class="slide__img">
-										<img src="img/gallery/gallery-2.webp" alt="merch" />
-									</div>
-									<div class="slide__text">
-										<p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-									</div>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="slide">
-									<div class="slide__img">
-										<img src="img/gallery/gallery-3.webp" alt="merch" />
-									</div>
-									<div class="slide__text">
-										<p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+								<div class="step-card">
+									<div class="step-card__title">Вибір матеріалів <br> і постачальників</div>
+									<div class="step-card__text">
+										<p>
+											Обирається тип тканини (бавовна, поліестер, суміш), розміри одягу
+											та якість пошиття залежно від бюджету й потреб.
+										</p>
 									</div>
 								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="slide">
-									<div class="slide__img">
-										<img src="img/gallery/gallery-4.webp" alt="merch" />
-									</div>
-									<div class="slide__text">
-										<p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-									</div>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="slide">
-									<div class="slide__img">
-										<img src="img/gallery/gallery-5.webp" alt="merch" />
-									</div>
-									<div class="slide__text">
-										<p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+								<div class="step-card">
+									<div class="step-card__title">Створення <br> прототипу</div>
+									<div class="step-card__text">
+										<p>
+											Виготовляється тестовий зразок одягу з обраним дизайном. Це
+											дозволяє перевірити, як виглядає малюнок на тканині, чи зручний
+											крій, та внести корективи.
+										</p>
 									</div>
 								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="slide">
-									<div class="slide__img">
-										<img src="img/gallery/gallery-1.webp" alt="merch" />
-									</div>
-									<div class="slide__text">
-										<p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-									</div>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="slide">
-									<div class="slide__img">
-										<img src="img/gallery/gallery-2.webp" alt="merch" />
-									</div>
-									<div class="slide__text">
-										<p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+								<div class="step-card">
+									<div class="step-card__title">Створення прототипу</div>
+									<div class="step-card__text">
+										<p>
+											Виготовляється тестовий зразок одягу з обраним дизайном. Це
+											дозволяє перевірити, як виглядає малюнок на тканині, чи зручний
+											крій, та внести корективи.
+										</p>
 									</div>
 								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="slide">
-									<div class="slide__img">
-										<img src="img/gallery/gallery-3.webp" alt="merch" />
-									</div>
-									<div class="slide__text">
-										<p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-									</div>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="slide">
-									<div class="slide__img">
-										<img src="img/gallery/gallery-4.webp" alt="merch" />
-									</div>
-									<div class="slide__text">
-										<p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+								<div class="step-card">
+									<div class="step-card__title">Виробництво та друк</div>
+									<div class="step-card__text">
+										<p>
+											Починається масове пошиття одягу та нанесення дизайну (трафаретний
+											друк, вишивка, термоперенос тощо).
+										</p>
 									</div>
 								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="slide">
-									<div class="slide__img">
-										<img src="img/gallery/gallery-5.webp" alt="merch" />
-									</div>
-									<div class="slide__text">
-										<p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+								<div class="step-card">
+									<div class="step-card__title">Доставка</div>
+									<div class="step-card__text">
+										<p>
+											Готовий мерч доставляється організаторам (наприклад, до школи чи
+											університету), після чого роздається випускникам.
+										</p>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<button type="button" class="swiper-button-prev"></button>
-					<button type="button" class="swiper-button-next"></button>
-				</div>
-	</div>
-	</section>
+				</section>
+				<section class="collection" id='catalog'>
+					<div class="collection__container">
+						<div class="collection__head">
+							<h2 class="collection__title">НАША КОЛЕКЦІЯ</h2>
+							<div class="collection__block">
+								<div class="collection__decors">
+									<img src="img/star.svg" alt="star" /><img src="img/star.svg" alt="star" />
+								</div>
+								<div class="collection__text">
+									<p>
+										Каталог товарів, створених нашою командою для усіх, хто цього
+										потребує.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="collection__cards">
+							<div class="collection-wiper swiper">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<div class="collection-card" style="background-image: url('img/collection/card-1.webp')">
+											<div class="collection-card__layout">
+												<span class="btn btn--sm" data-popup="#popup">Замовити</span>
+											</div>
+											<div class="collection-card__body">
+												<h5 class="collection-card__title">НАЗВА ТОВАРУ НАЗВА НАЗВА</h5>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="collection-card" style="background-image: url('img/collection/card-2.webp')">
+											<div class="collection-card__layout">
+												<span class="btn" data-popup="#popup">Замовити</span>
+											</div>
+											<div class="collection-card__body">
+												<h5 class="collection-card__title">НАЗВА ТОВАРУ НАЗВА НАЗВА</h5>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="collection-card" style="background-image: url('img/collection/card-3.webp')">
+											<div class="collection-card__layout">
+												<span class="btn btn--sm" data-popup="#popup">Замовити</span>
+											</div>
+											<div class="collection-card__body">
+												<h5 class="collection-card__title">НАЗВА ТОВАРУ НАЗВА НАЗВА</h5>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="collection-card" style="background-image: url('img/collection/card-4.webp')">
+											<div class="collection-card__layout">
+												<span class="btn btn--sm" data-popup="#popup">Замовити</span>
+											</div>
+											<div class="collection-card__body">
+												<h5 class="collection-card__title">НАЗВА ТОВАРУ НАЗВА НАЗВА</h5>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- <div class="swiper-pagination"></div> -->
+								<!-- <button type="button" class="swiper-button-prev"></button>
+				<button type="button" class="swiper-button-next"></button>
+				<div class="swiper-scrollbar"></div> -->
+							</div>
+						</div>
+					</div>
+				</section>
 
-	<section class="reviews" id='reviews'>
-		<div class="reviews__container">
-			<div class="section-head">
-				<h2 class="section-title">Вiдгуки</h2>
-			</div>
-			<div class="reviews__body">
-				<div class="reviews-swiper swiper">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide">
-							<div class="reviews-slide">
-								<div class="reviews-card">
-									<div class="reviews-card__title">Anna</div>
-									<div class="reviews-card__text">
-										<p>
-											Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
-											aspernatur eum veritatis qui blanditiis delectus.
-										</p>
+				<section class="gallery" id='gallery'>
+					<div class="gallery__container">
+						<div class="gallery__inner">
+							<div class="gallery-swiper swiper">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<div class="gallery-card">
+											<div class="gallery-card__img">
+												<img src="img/gallery-1.webp" alt="img" />
+											</div>
+											<div class="gallery-card__labels">
+												<div class="gallery-card__label">НА 100% З бавовни</div>
+												<div class="gallery-card__label">екологічно чисті матеріали</div>
+												<div class="gallery-card__label">захист від ультрафіолету</div>
+												<div class="gallery-card__label">нові сумісні фасони</div>
+											</div>
+										</div>
 									</div>
+									<div class="swiper-slide">
+										<div class="gallery-cardlg">
+											<div class="gallery-cardlg__top">
+												<div class="gallery-cardlg__head">
+													<div class="gallery-cardlg__line">
+														<div class="gallery-cardlg__line-title">ГАЛЕРЕЯ</div>
+														<div class="gallery-cardlg__line-text">
+															ОДЯГ ДЛЯ ВАС ЗА ДОСТУПНИМИ ЦІНАМИ!
+														</div>
+													</div>
+													<div class="gallery-cardlg__title">КОЛЕКЦІЙ</div>
+												</div>
+												<div class="gallery-cardlg__block">
+													<div class="gallery-cardlg__stars">
+														<img src="img/star.svg" alt="star" />
+														<img src="img/star.svg" alt="star" />
+													</div>
+													<div class="gallery-cardlg__text">
+														Каталог товарів, створених нашою командою для усіх, хто цього
+														потребує.
+													</div>
+												</div>
+											</div>
+											<div class="gallery-cardlg__bottom">
+												<div class="gallery-cardlg__img">
+													<img src="img/gallery-2.webp" alt="gallery" />
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="gallery-card">
+											<div class="gallery-card__img">
+												<img src="img/gallery-1.webp" alt="img" />
+											</div>
+											<div class="gallery-card__labels">
+												<div class="gallery-card__label">НА 100% З бавовни</div>
+												<div class="gallery-card__label">екологічно чисті матеріали</div>
+												<div class="gallery-card__label">захист від ультрафіолету</div>
+												<div class="gallery-card__label">нові сумісні фасони</div>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="gallery-cardlg">
+											<div class="gallery-cardlg__top">
+												<div class="gallery-cardlg__head">
+													<div class="gallery-cardlg__line">
+														<div class="gallery-cardlg__line-title">ГАЛЕРЕЯ</div>
+														<div class="gallery-cardlg__line-text">
+															ОДЯГ ДЛЯ ВАС ЗА ДОСТУПНИМИ ЦІНАМИ!
+														</div>
+													</div>
+													<div class="gallery-cardlg__title">КОЛЕКЦІЙ</div>
+												</div>
+												<div class="gallery-cardlg__block">
+													<div class="gallery-cardlg__stars">
+														<img src="img/star.svg" alt="star" />
+														<img src="img/star.svg" alt="star" />
+													</div>
+													<div class="gallery-cardlg__text">
+														Каталог товарів, створених нашою командою для усіх, хто цього
+														потребує.
+													</div>
+												</div>
+											</div>
+											<div class="gallery-cardlg__bottom">
+												<div class="gallery-cardlg__img">
+													<img src="img/gallery-2.webp" alt="gallery" />
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="swiper-slide">
+										<div class="gallery-card">
+											<div class="gallery-card__img">
+												<img src="img/gallery-1.webp" alt="img" />
+											</div>
+											<div class="gallery-card__labels">
+												<div class="gallery-card__label">НА 100% З бавовни</div>
+												<div class="gallery-card__label">екологічно чисті матеріали</div>
+												<div class="gallery-card__label">захист від ультрафіолету</div>
+												<div class="gallery-card__label">нові сумісні фасони</div>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="gallery-cardlg">
+											<div class="gallery-cardlg__top">
+												<div class="gallery-cardlg__head">
+													<div class="gallery-cardlg__line">
+														<div class="gallery-cardlg__line-title">ГАЛЕРЕЯ</div>
+														<div class="gallery-cardlg__line-text">
+															ОДЯГ ДЛЯ ВАС ЗА ДОСТУПНИМИ ЦІНАМИ!
+														</div>
+													</div>
+													<div class="gallery-cardlg__title">КОЛЕКЦІЙ</div>
+												</div>
+												<div class="gallery-cardlg__block">
+													<div class="gallery-cardlg__stars">
+														<img src="img/star.svg" alt="star" />
+														<img src="img/star.svg" alt="star" />
+													</div>
+													<div class="gallery-cardlg__text">
+														Каталог товарів, створених нашою командою для усіх, хто цього
+														потребує.
+													</div>
+												</div>
+											</div>
+											<div class="gallery-cardlg__bottom">
+												<div class="gallery-cardlg__img">
+													<img src="img/gallery-2.webp" alt="gallery" />
+												</div>
+											</div>
+										</div>
+									</div>
+
 								</div>
 							</div>
-						</div>
-						<div class="swiper-slide">
-							<div class="reviews-slide">
-								<div class="reviews-card">
-									<div class="reviews-card__title">Anna</div>
-									<div class="reviews-card__text">
-										<p>
-											Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
-											aspernatur eum veritatis qui blanditiis delectus.
-										</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="swiper-slide">
-							<div class="reviews-slide">
-								<div class="reviews-card">
-									<div class="reviews-card__title">Anna</div>
-									<div class="reviews-card__text">
-										<p>
-											Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
-											aspernatur eum veritatis qui blanditiis delectus.
-										</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="swiper-slide">
-							<div class="reviews-slide">
-								<div class="reviews-card">
-									<div class="reviews-card__title">Anna</div>
-									<div class="reviews-card__text">
-										<p>
-											Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
-											aspernatur eum veritatis qui blanditiis delectus.
-										</p>
-									</div>
-								</div>
+							<div class="gallery__control">
+								<div class="gallery__bullets"></div>
+								<div class="gallery__prev"></div>
+								<div class="gallery__next"></div>
 							</div>
 						</div>
 					</div>
-					<div class="swiper-pagination"></div>
-				</div>
-			</div>
-		</div>
-	</section>
+				</section>
 
-	</main>
-	<footer class="footer">
-		<div class="footer__container">
-			<div class="footer__inner">
-				<div class="footer__left">
+				<section class="reviews" id='reviews'>
+					<div class="reviews__container">
+						<div class="reviews__head">
+							<div class="reviews__line">
+								<div class="reviews__line-title">ВІДГУКИ</div>
+								<div class="review__line-decor">
+									<img src="img/reviews-decor.svg" alt="decor" />
+								</div>
+							</div>
+							<div class="review__title">НАШИХ КЛІЄНТІВ</div>
+						</div>
+						<div class="reviews-swiper swiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="reviews__cards">
+										<div class="review-card">
+											<div class="review-card__title">Віктор Віктор</div>
+											<div class="review-card__text">
+												<p>
+													Lorem ipsum dolor sit amet consectetur. Nunc ac dui commodo
+													rhoncus eu. Vestibulum facilisis tristique etiam platea non
+													nisl augue faucibus mauris. Ut consequat amet in diam in
+													vulputate et at amet. Tincidunt est velit euismod sed. Viverra
+													diam habitant metus aenean id ut. Hac odio massa facilisi sit
+													egestas suspendisse.
+												</p>
+											</div>
+										</div>
+										<div class="review-card">
+											<div class="review-card__title">АННА АННА</div>
+											<div class="review-card__text">
+												<p>
+													Lorem ipsum dolor sit amet consectetur. Nunc ac dui commodo
+													rhoncus eu. Vestibulum facilisis tristique etiam platea non
+													nisl augue faucibus mauris. Ut consequat amet in diam in
+													vulputate et at amet. Tincidunt est velit euismod sed. Viverra
+													diam habitant metus aenean id ut. Hac odio massa facilisi sit
+													egestas suspendisse.
+												</p>
+											</div>
+										</div>
+										<div class="review-card">
+											<div class="review-card__title">ІРИНА ІРИНА</div>
+											<div class="review-card__text">
+												<p>
+													Lorem ipsum dolor sit amet consectetur. Nunc ac dui commodo
+													rhoncus eu. Vestibulum facilisis tristique etiam platea non
+													nisl augue faucibus mauris. Ut consequat amet in diam in
+													vulputate et at amet. Tincidunt est velit euismod sed. Viverra
+													diam habitant metus aenean id ut. Hac odio massa facilisi sit
+													egestas suspendisse.
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="reviews__cards">
+										<div class="review-card">
+											<div class="review-card__title">Віктор Віктор</div>
+											<div class="review-card__text">
+												<p>
+													Lorem ipsum dolor sit amet consectetur. Nunc ac dui commodo
+													rhoncus eu. Vestibulum facilisis tristique etiam platea non
+													nisl augue faucibus mauris. Ut consequat amet in diam in
+													vulputate et at amet. Tincidunt est velit euismod sed. Viverra
+													diam habitant metus aenean id ut. Hac odio massa facilisi sit
+													egestas suspendisse.
+												</p>
+											</div>
+										</div>
+										<div class="review-card">
+											<div class="review-card__title">АННА АННА</div>
+											<div class="review-card__text">
+												<p>
+													Lorem ipsum dolor sit amet consectetur. Nunc ac dui commodo
+													rhoncus eu. Vestibulum facilisis tristique etiam platea non
+													nisl augue faucibus mauris. Ut consequat amet in diam in
+													vulputate et at amet. Tincidunt est velit euismod sed. Viverra
+													diam habitant metus aenean id ut. Hac odio massa facilisi sit
+													egestas suspendisse.
+												</p>
+											</div>
+										</div>
+										<div class="review-card">
+											<div class="review-card__title">ІРИНА ІРИНА</div>
+											<div class="review-card__text">
+												<p>
+													Lorem ipsum dolor sit amet consectetur. Nunc ac dui commodo
+													rhoncus eu. Vestibulum facilisis tristique etiam platea non
+													nisl augue faucibus mauris. Ut consequat amet in diam in
+													vulputate et at amet. Tincidunt est velit euismod sed. Viverra
+													diam habitant metus aenean id ut. Hac odio massa facilisi sit
+													egestas suspendisse.
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="reviews__cards">
+										<div class="review-card">
+											<div class="review-card__title">Віктор Віктор</div>
+											<div class="review-card__text">
+												<p>
+													Lorem ipsum dolor sit amet consectetur. Nunc ac dui commodo
+													rhoncus eu. Vestibulum facilisis tristique etiam platea non
+													nisl augue faucibus mauris. Ut consequat amet in diam in
+													vulputate et at amet. Tincidunt est velit euismod sed. Viverra
+													diam habitant metus aenean id ut. Hac odio massa facilisi sit
+													egestas suspendisse.
+												</p>
+											</div>
+										</div>
+										<div class="review-card">
+											<div class="review-card__title">АННА АННА</div>
+											<div class="review-card__text">
+												<p>
+													Lorem ipsum dolor sit amet consectetur. Nunc ac dui commodo
+													rhoncus eu. Vestibulum facilisis tristique etiam platea non
+													nisl augue faucibus mauris. Ut consequat amet in diam in
+													vulputate et at amet. Tincidunt est velit euismod sed. Viverra
+													diam habitant metus aenean id ut. Hac odio massa facilisi sit
+													egestas suspendisse.
+												</p>
+											</div>
+										</div>
+										<div class="review-card">
+											<div class="review-card__title">ІРИНА ІРИНА</div>
+											<div class="review-card__text">
+												<p>
+													Lorem ipsum dolor sit amet consectetur. Nunc ac dui commodo
+													rhoncus eu. Vestibulum facilisis tristique etiam platea non
+													nisl augue faucibus mauris. Ut consequat amet in diam in
+													vulputate et at amet. Tincidunt est velit euismod sed. Viverra
+													diam habitant metus aenean id ut. Hac odio massa facilisi sit
+													egestas suspendisse.
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="reviews__cards">
+										<div class="review-card">
+											<div class="review-card__title">Віктор Віктор</div>
+											<div class="review-card__text">
+												<p>
+													Lorem ipsum dolor sit amet consectetur. Nunc ac dui commodo
+													rhoncus eu. Vestibulum facilisis tristique etiam platea non
+													nisl augue faucibus mauris. Ut consequat amet in diam in
+													vulputate et at amet. Tincidunt est velit euismod sed. Viverra
+													diam habitant metus aenean id ut. Hac odio massa facilisi sit
+													egestas suspendisse.
+												</p>
+											</div>
+										</div>
+										<div class="review-card">
+											<div class="review-card__title">АННА АННА</div>
+											<div class="review-card__text">
+												<p>
+													Lorem ipsum dolor sit amet consectetur. Nunc ac dui commodo
+													rhoncus eu. Vestibulum facilisis tristique etiam platea non
+													nisl augue faucibus mauris. Ut consequat amet in diam in
+													vulputate et at amet. Tincidunt est velit euismod sed. Viverra
+													diam habitant metus aenean id ut. Hac odio massa facilisi sit
+													egestas suspendisse.
+												</p>
+											</div>
+										</div>
+										<div class="review-card">
+											<div class="review-card__title">ІРИНА ІРИНА</div>
+											<div class="review-card__text">
+												<p>
+													Lorem ipsum dolor sit amet consectetur. Nunc ac dui commodo
+													rhoncus eu. Vestibulum facilisis tristique etiam platea non
+													nisl augue faucibus mauris. Ut consequat amet in diam in
+													vulputate et at amet. Tincidunt est velit euismod sed. Viverra
+													diam habitant metus aenean id ut. Hac odio massa facilisi sit
+													egestas suspendisse.
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-pagination"></div>
+						</div>
+					</div>
+				</section>
+
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__head">
+					<a class="footer__logo" href="#">
+						<img src="img/logo-light.svg" alt="logo" />
+					</a>
 					<div class="footer__menu">
 						<ul>
-							<li><a href="#choose">Етапи Виробництва</a></li>
-							<li><a href="#catalog">Каталог</a></li>
-							<li><a href="#gallery">Галерея</a></li>
-							<li><a href="#reviews">Вiдгуки</a></li>
+							<li><a href='#steps'>ЕТАПИ ВИРОБНИЦТВА</a></li>
+							<li><a href='#catalog'>КАТАЛОГ</a></li>
+							<li><a href='#gallery'>ГАЛЕРЕЯ</a></li>
+							<li><a href='#steps'>ЕТАПИ ВИРОБНИЦТВА</a></li>
 						</ul>
 					</div>
-					<div class="footer__text">
-						<p>
-							Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-							Consequatur minus, quod laudantium non voluptate repellendus ullam
-							sed sint necessitatibus ratione unde quasi cupiditate optio deleniti
-							assumenda beatae dolor neque nesciunt?
-						</p>
+					<div class="footer__contacts">
+						<a class="footer__tel" href="tel:">+380 77 777 77 77</a>
+						<button class="footer__callback" type="button" data-popup="#popup">
+							ЗВ’ЯЖІТЬСЯ З НАМИ
+						</button>
 					</div>
 				</div>
-				<div class="footer__right">
-					<div class="footer__top">
-						<div class="footer-contact">
-							<div class="footer-contact__title">Email</div>
-							<a class="footer-contact__email" href="mailto:">mail@mail.com</a>
+				<div class="footer__bottom">
+					<div class="footer-block">
+						<div class="footer-block__col">
+							<div class="footer-block__title">КОНТАКТЫ</div>
+							<a class="footer-block__link" href="tel:">
+								<img src="img/call.svg" alt="icon" />+380 77 777 77 77
+							</a>
+							<a class="footer-block__link" href="tel:">
+								<img src="img/mail.svg" alt="icon" />example@gmail.com
+							</a>
 						</div>
-						<div class="footer-contact">
-							<div class="footer-contact__title">Telephone</div>
-							<a class="footer-contact__phone" href="tel:">+999999999</a>
+						<div class="footer-block__decor">
+							<div class="footer-block__logo">
+								<img src="img/logo-symbol.svg" alt="logo" />
+							</div>
 						</div>
-					</div>
-					<div class="footer__follow">
-						<div class="footer-follow">
-							<div class="footer-follow__title">Follow us on social media</div>
-							<div class="footer-follow__icons">
-								<a href="#"><img src="img/icons/insta.svg" alt="instagram" /></a>
-								<a href="#"><img src="img/icons/facebook.svg" alt="facebook" /></a>
-								<a href="#"><img src="img/icons/twitter.svg" alt="twitter" /></a>
+						<div class="footer-block__col">
+							<div class="footer-block__social">
+								<a href="#"><img src="img/telegram.svg" alt="icon" /></a>
+								<a href="#"><img src="img/twitter.svg" alt="icon" /></a>
+								<a href="#"><img src="img/facebook.svg" alt="icon" /></a>
+								<a href="#"><img src="img/instagram.svg" alt="icon" /></a>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</footer>
+		</footer>
 
 	</div>
-	<div id="contact-modal" aria-hidden="true" class="popup">
+	<div id="popup" aria-hidden="true" class="popup">
 		<div class="popup__wrapper">
 			<div class="popup__content">
 				<button data-close type="button" class="popup__close">
 					<svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path opacity="0.850056" d="M1.73333 1.48883L21.5469 21.0288" stroke="#979797" stroke-linecap="square" />
-						<path opacity="0.850056" d="M21.2667 1.48883L1.45309 21.0288" stroke="#979797" stroke-linecap="square" />
+						<path d="M21.5281 1.3291L0.979492 21.8777M21.5281 21.8777L0.979492 1.3291" stroke="black" stroke-width="2" />
 					</svg>
+
 				</button>
 				<div class="popup__text">
-					<div class="modal">
-						<div class="modal__title">Контакти</div>
-						<div class="modal__body">
-							<div class="modal-contact">
-								<div class="modal-contaсt__label">Телефон</div>
-								<a href="tel:+380674444444" class="modal-contaсt__link">
-									+38 (067) 444 44 44
-								</a>
-							</div>
-							<div class="modal-contact">
-								<div class="modal-contaсt__label">Пошта</div>
-								<a href="mailto:" class="modal-contaсt__link"> mail@mail.co </a>
-							</div>
-							<div class="modal-contact">
-								<div class="modal-contaсt__label">Адреса</div>
-								<p>Далеко-далеко за словесными горами в стране.</p>
-							</div>
-							<form class="modal-form" action="#">
-								<input type="tel" placeholder="Ваш телефон" />
-								<input type="text" placeholder="Ваше ім’я" />
-								<input class="button" type="submit" value="Відправити" />
-							</form>
+					<div class="popup__title">ЗАМОВлЕННЯ</div>
+					<div class="popup__block">
+						<div class="popup__descr">
+							Для замовлення звертайтесь за телефоном
 						</div>
+						<a href="tel:+" class="popup__tel">
+							<img src="img/tel.svg" alt="icon" />
+							<span>+380 77 777 77 77</span>
+						</a>
+						<br />
+						<span class="popup__descr popup__descr--grey">або</span>
+						<br />
+						<a href="#" class="popup__social">
+							<span class="popup__social-icon">
+								<img src="img/telegram.svg" alt="telegram" />
+							</span>
+							<span>Telegram</span>
+						</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<div id="order-modal" aria-hidden="true" class="popup">
-		<div class="popup__wrapper">
-			<div class="popup__content">
-				<button data-close type="button" class="popup__close">
-					<svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path opacity="0.850056" d="M1.73333 1.48883L21.5469 21.0288" stroke="#979797" stroke-linecap="square" />
-						<path opacity="0.850056" d="M21.2667 1.48883L1.45309 21.0288" stroke="#979797" stroke-linecap="square" />
-					</svg>
-				</button>
-				<div class="popup__text">
-					<div class="modal">
-						<div class="modal__title">Замовити</div>
-						<div class="modal__body">
-							<!-- <form class="modal-form" action="#">
-							<input type="tel" placeholder="Ваш телефон" />
-							<input type="text" placeholder="Ваше ім’я" />
-							<input class="button" type="submit" value="Відправити" />
-						</form> -->
-
-							<div class="modal__text">
-								Для замовлення звертайтесь за телефоном
-								<a href="tel:">+097666666</a> або telegram <br>
-								<a href="#">
-									<img src="img/icons/telegram.svg" alt="telegram" />
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<script src="js/app.min.js?_v=20250403122902"></script>
+	<script src="js/app.min.js?_v=20250404221333"></script>
 </body>
 
 </html>
