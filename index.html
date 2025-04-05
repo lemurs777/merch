@@ -7,9 +7,9 @@
 	<meta name="format-detection" content="telephone=no" />
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link href="https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@0,100..900;1,100..900&display=swap&_v=20250404221333" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@0,100..900;1,100..900&display=swap&_v=20250405135200" rel="stylesheet" />
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20250404221333" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20250405135200" />
 	<link rel="shortcut icon" href="favicon.ico" />
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -59,7 +59,8 @@
 						<h1 class="hero__title">
 							<img src="img/decor.svg" alt="decor" />
 							ЗНАЙДИ СВІЙ
-							<div>СТИЛЬ <span>ТУТ</span></div>
+							<div>СТИЛЬ <div>ТУТ</div>
+							</div>
 						</h1>
 						<div class="hero__text">
 							<p>
@@ -165,7 +166,7 @@
 						</div>
 					</div>
 				</section>
-				<section class="collection" id='catalog'>
+				<section class="collection" id="catalog">
 					<div class="collection__container">
 						<div class="collection__head">
 							<h2 class="collection__title">НАША КОЛЕКЦІЯ</h2>
@@ -182,12 +183,12 @@
 							</div>
 						</div>
 						<div class="collection__cards">
-							<div class="collection-wiper swiper">
+							<div class="collection-swiper swiper">
 								<div class="swiper-wrapper">
 									<div class="swiper-slide">
-										<div class="collection-card" style="background-image: url('img/collection/card-1.webp')">
+										<div class="collection-card" data-popup="#popup" style="background-image: url('img/collection/card-1.webp')">
 											<div class="collection-card__layout">
-												<span class="btn btn--sm" data-popup="#popup">Замовити</span>
+												<span class="btn btn--sm">Замовити</span>
 											</div>
 											<div class="collection-card__body">
 												<h5 class="collection-card__title">НАЗВА ТОВАРУ НАЗВА НАЗВА</h5>
@@ -195,9 +196,9 @@
 										</div>
 									</div>
 									<div class="swiper-slide">
-										<div class="collection-card" style="background-image: url('img/collection/card-2.webp')">
+										<div class="collection-card" data-popup="#popup" style="background-image: url('img/collection/card-2.webp')">
 											<div class="collection-card__layout">
-												<span class="btn" data-popup="#popup">Замовити</span>
+												<span class="btn">Замовити</span>
 											</div>
 											<div class="collection-card__body">
 												<h5 class="collection-card__title">НАЗВА ТОВАРУ НАЗВА НАЗВА</h5>
@@ -205,9 +206,9 @@
 										</div>
 									</div>
 									<div class="swiper-slide">
-										<div class="collection-card" style="background-image: url('img/collection/card-3.webp')">
+										<div class="collection-card" data-popup="#popup" style="background-image: url('img/collection/card-3.webp')">
 											<div class="collection-card__layout">
-												<span class="btn btn--sm" data-popup="#popup">Замовити</span>
+												<span class="btn btn--sm">Замовити</span>
 											</div>
 											<div class="collection-card__body">
 												<h5 class="collection-card__title">НАЗВА ТОВАРУ НАЗВА НАЗВА</h5>
@@ -215,9 +216,9 @@
 										</div>
 									</div>
 									<div class="swiper-slide">
-										<div class="collection-card" style="background-image: url('img/collection/card-4.webp')">
+										<div class="collection-card" data-popup="#popup" style="background-image: url('img/collection/card-4.webp')">
 											<div class="collection-card__layout">
-												<span class="btn btn--sm" data-popup="#popup">Замовити</span>
+												<span class="btn btn--sm">Замовити</span>
 											</div>
 											<div class="collection-card__body">
 												<h5 class="collection-card__title">НАЗВА ТОВАРУ НАЗВА НАЗВА</h5>
@@ -225,7 +226,7 @@
 										</div>
 									</div>
 								</div>
-								<!-- <div class="swiper-pagination"></div> -->
+								<div class="collection-pagination"></div>
 								<!-- <button type="button" class="swiper-button-prev"></button>
 				<button type="button" class="swiper-button-next"></button>
 				<div class="swiper-scrollbar"></div> -->
@@ -234,9 +235,30 @@
 					</div>
 				</section>
 
-				<section class="gallery" id='gallery'>
+				<section class="gallery" id="gallery">
 					<div class="gallery__container">
 						<div class="gallery__inner">
+							<div class="gallery-cardlg__top">
+								<div class="gallery-cardlg__head">
+									<div class="gallery-cardlg__line">
+										<div class="gallery-cardlg__line-title">ГАЛЕРЕЯ</div>
+										<div class="gallery-cardlg__line-text">
+											ОДЯГ ДЛЯ ВАС ЗА ДОСТУПНИМИ ЦІНАМИ!
+										</div>
+									</div>
+									<div class="gallery-cardlg__title">КОЛЕКЦІЙ</div>
+								</div>
+								<div class="gallery-cardlg__block">
+									<div class="gallery-cardlg__stars">
+										<img src="img/star.svg" alt="star" />
+										<img src="img/star.svg" alt="star" />
+									</div>
+									<div class="gallery-cardlg__text">
+										Каталог товарів, створених нашою командою для усіх, хто цього
+										потребує.
+									</div>
+								</div>
+							</div>
 							<div class="gallery-swiper swiper">
 								<div class="swiper-wrapper">
 									<div class="swiper-slide">
@@ -254,70 +276,7 @@
 									</div>
 									<div class="swiper-slide">
 										<div class="gallery-cardlg">
-											<div class="gallery-cardlg__top">
-												<div class="gallery-cardlg__head">
-													<div class="gallery-cardlg__line">
-														<div class="gallery-cardlg__line-title">ГАЛЕРЕЯ</div>
-														<div class="gallery-cardlg__line-text">
-															ОДЯГ ДЛЯ ВАС ЗА ДОСТУПНИМИ ЦІНАМИ!
-														</div>
-													</div>
-													<div class="gallery-cardlg__title">КОЛЕКЦІЙ</div>
-												</div>
-												<div class="gallery-cardlg__block">
-													<div class="gallery-cardlg__stars">
-														<img src="img/star.svg" alt="star" />
-														<img src="img/star.svg" alt="star" />
-													</div>
-													<div class="gallery-cardlg__text">
-														Каталог товарів, створених нашою командою для усіх, хто цього
-														потребує.
-													</div>
-												</div>
-											</div>
-											<div class="gallery-cardlg__bottom">
-												<div class="gallery-cardlg__img">
-													<img src="img/gallery-2.webp" alt="gallery" />
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="swiper-slide">
-										<div class="gallery-card">
-											<div class="gallery-card__img">
-												<img src="img/gallery-1.webp" alt="img" />
-											</div>
-											<div class="gallery-card__labels">
-												<div class="gallery-card__label">НА 100% З бавовни</div>
-												<div class="gallery-card__label">екологічно чисті матеріали</div>
-												<div class="gallery-card__label">захист від ультрафіолету</div>
-												<div class="gallery-card__label">нові сумісні фасони</div>
-											</div>
-										</div>
-									</div>
-									<div class="swiper-slide">
-										<div class="gallery-cardlg">
-											<div class="gallery-cardlg__top">
-												<div class="gallery-cardlg__head">
-													<div class="gallery-cardlg__line">
-														<div class="gallery-cardlg__line-title">ГАЛЕРЕЯ</div>
-														<div class="gallery-cardlg__line-text">
-															ОДЯГ ДЛЯ ВАС ЗА ДОСТУПНИМИ ЦІНАМИ!
-														</div>
-													</div>
-													<div class="gallery-cardlg__title">КОЛЕКЦІЙ</div>
-												</div>
-												<div class="gallery-cardlg__block">
-													<div class="gallery-cardlg__stars">
-														<img src="img/star.svg" alt="star" />
-														<img src="img/star.svg" alt="star" />
-													</div>
-													<div class="gallery-cardlg__text">
-														Каталог товарів, створених нашою командою для усіх, хто цього
-														потребує.
-													</div>
-												</div>
-											</div>
+
 											<div class="gallery-cardlg__bottom">
 												<div class="gallery-cardlg__img">
 													<img src="img/gallery-2.webp" alt="gallery" />
@@ -329,7 +288,7 @@
 									<div class="swiper-slide">
 										<div class="gallery-card">
 											<div class="gallery-card__img">
-												<img src="img/gallery-1.webp" alt="img" />
+												<img src="img/gallery-3.webp" alt="img" />
 											</div>
 											<div class="gallery-card__labels">
 												<div class="gallery-card__label">НА 100% З бавовни</div>
@@ -341,30 +300,34 @@
 									</div>
 									<div class="swiper-slide">
 										<div class="gallery-cardlg">
-											<div class="gallery-cardlg__top">
-												<div class="gallery-cardlg__head">
-													<div class="gallery-cardlg__line">
-														<div class="gallery-cardlg__line-title">ГАЛЕРЕЯ</div>
-														<div class="gallery-cardlg__line-text">
-															ОДЯГ ДЛЯ ВАС ЗА ДОСТУПНИМИ ЦІНАМИ!
-														</div>
-													</div>
-													<div class="gallery-cardlg__title">КОЛЕКЦІЙ</div>
-												</div>
-												<div class="gallery-cardlg__block">
-													<div class="gallery-cardlg__stars">
-														<img src="img/star.svg" alt="star" />
-														<img src="img/star.svg" alt="star" />
-													</div>
-													<div class="gallery-cardlg__text">
-														Каталог товарів, створених нашою командою для усіх, хто цього
-														потребує.
-													</div>
-												</div>
-											</div>
+
 											<div class="gallery-cardlg__bottom">
 												<div class="gallery-cardlg__img">
-													<img src="img/gallery-2.webp" alt="gallery" />
+													<img src="img/gallery-4.webp" alt="gallery" />
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="swiper-slide">
+										<div class="gallery-card">
+											<div class="gallery-card__img">
+												<img src="img/gallery-5.webp" alt="img" />
+											</div>
+											<div class="gallery-card__labels">
+												<div class="gallery-card__label">НА 100% З бавовни</div>
+												<div class="gallery-card__label">екологічно чисті матеріали</div>
+												<div class="gallery-card__label">захист від ультрафіолету</div>
+												<div class="gallery-card__label">нові сумісні фасони</div>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="gallery-cardlg">
+
+											<div class="gallery-cardlg__bottom">
+												<div class="gallery-cardlg__img">
+													<img src="img/gallery-6.webp" alt="gallery" />
 												</div>
 											</div>
 										</div>
@@ -612,6 +575,7 @@
 							</div>
 						</div>
 						<div class="footer-block__col">
+							<div class="footer-block__title">МЕДИА</div>
 							<div class="footer-block__social">
 								<a href="#"><img src="img/telegram.svg" alt="icon" /></a>
 								<a href="#"><img src="img/twitter.svg" alt="icon" /></a>
@@ -659,7 +623,7 @@
 		</div>
 	</div>
 
-	<script src="js/app.min.js?_v=20250404221333"></script>
+	<script src="js/app.min.js?_v=20250405135200"></script>
 </body>
 
 </html>

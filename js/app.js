@@ -2,6 +2,9 @@
     "use strict";
     const flsModules = {};
     let bodyLockStatus = true;
+    let bodyLockToggle = (delay = 500) => {
+        if (document.documentElement.classList.contains("lock")) bodyUnlock(delay); else bodyLock(delay);
+    };
     let bodyUnlock = (delay = 500) => {
         if (bodyLockStatus) {
             const lockPaddingElements = document.querySelectorAll("[data-lp]");
@@ -33,6 +36,14 @@
             }), delay);
         }
     };
+    function menuInit() {
+        if (document.querySelector(".icon-menu")) document.addEventListener("click", (function(e) {
+            if (bodyLockStatus && e.target.closest(".icon-menu")) {
+                bodyLockToggle();
+                document.documentElement.classList.toggle("menu-open");
+            }
+        }));
+    }
     class Popup {
         constructor(options) {
             let config = {
@@ -3764,10 +3775,31 @@
     }
     function initSliders() {
         if (document.querySelector(".collection-swiper")) new swiper_core_Swiper(".collection-swiper", {
+            modules: [ Pagination ],
             observer: true,
             observeParents: true,
-            slidesPerView: "auto",
+            slidesPerView: 1,
+            spaceBetween: 14,
             speed: 800,
+            pagination: {
+                el: ".collection-pagination",
+                clickable: true
+            },
+            breakpoints: {
+                480: {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                    autoHeight: true
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 20
+                },
+                1200: {
+                    slidesPerView: 4,
+                    spaceBetween: 24
+                }
+            },
             on: {}
         });
         if (document.querySelector(".reviews-swiper")) new swiper_core_Swiper(".reviews-swiper", {
@@ -3786,10 +3818,9 @@
             modules: [ Pagination, Navigation ],
             observer: true,
             observeParents: true,
-            slidesPerView: "auto",
-            slidesPerGroup: 2,
-            spaceBetween: 14,
+            slidesPerView: 1,
             speed: 800,
+            spaceBetween: 14,
             pagination: {
                 el: ".gallery__bullets",
                 clickable: true,
@@ -3799,10 +3830,19 @@
                 prevEl: ".gallery__prev",
                 nextEl: ".gallery__next"
             },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 14,
+                    slidesPerGroup: 2,
+                    speed: 0
+                }
+            },
             on: {}
         });
     }
     window.addEventListener("load", (function(e) {
         initSliders();
     }));
+    menuInit();
 })();
