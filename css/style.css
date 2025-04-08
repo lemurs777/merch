@@ -281,6 +281,16 @@ body::after {
   background: url(../img/bg-2.webp) center/cover no-repeat;
   width: 100%
 }
+.page__decor-wrapper::before {
+  position: absolute;
+  left: 50%;
+  top: 1000px;
+  content: "";
+  background: url(../img/innovation.webp) center/contain no-repeat;
+  aspect-ratio: 3175/1204;
+  height: 75.25rem;
+  translate: -50% 0
+}
 .header {
   position: absolute;
   left: 0;
@@ -724,7 +734,9 @@ body::after {
   }
 }
 .steps {
-  margin: 5.625rem 0 10.3125rem
+  margin: 5.625rem 0 10.3125rem;
+  position: relative;
+  z-index: 1
 }
 .steps__container {
   max-width: 84.375rem
@@ -1373,6 +1385,10 @@ body::after {
   .popup__content {
     padding: 2rem 1.25rem 1.25rem
   }
+  .page__decor-wrapper::before {
+    height: 43.75rem;
+    top: 37.5rem
+  }
   .header {
     padding: 1rem 0
   }
@@ -1468,7 +1484,7 @@ body::after {
     font-size: 4rem
   }
   .hero__inner {
-    max-height: 37.5rem;
+    max-height: 31.25rem;
     padding-top: 6.25rem;
     display: flex;
     flex-direction: column;
@@ -1497,11 +1513,12 @@ body::after {
     padding: .625rem;
     border-radius: .625rem;
     -webkit-filter: invert(1);
-    filter: invert(1)
+    filter: invert(1);
+    display: none
   }
   .hero__girl {
     width: calc(100% + 1.875rem);
-    max-width: 28.125rem
+    max-width: 23.4375rem
   }
   .hero__scroll {
     font-size: 1.125rem
@@ -1570,7 +1587,7 @@ body::after {
     gap: 1rem
   }
   .collection-card {
-    aspect-ratio: 3/4;
+    aspect-ratio: 3/3.5;
     border-radius: 1.5rem
   }
   .collection-card__title {
@@ -1618,7 +1635,7 @@ body::after {
     background-size: 3.75rem
   }
   .gallery {
-    border-radius: 3.25rem;
+    border-radius: 2rem;
     padding: .9375rem 0
   }
   .gallery__inner::after {
@@ -1627,16 +1644,23 @@ body::after {
   }
   .gallery__control {
     position: static;
-    padding: 1.125rem;
+    padding: .875rem 1.125rem;
     height: auto;
-    aspect-ratio: 1;
-    width: 9.375rem;
     gap: 0 .75rem;
-    border-radius: 2rem;
-    margin-top: 1rem
+    border-radius: 1.25rem;
+    margin-top: 1rem;
+    flex-wrap: nowrap;
+    aspect-ratio: auto;
+    width: auto;
+    display: inline-flex
   }
   .gallery__bullets {
-    font-size: 3rem
+    font-size: 1.5rem;
+    flex: none
+  }
+  .gallery__next,
+  .gallery__prev {
+    width: 1.875rem
   }
   .gallery-swiper .swiper-slide {
     opacity: 1
@@ -1644,16 +1668,27 @@ body::after {
   .gallery-swiper .swiper-slide.swiper-slide-active {
     width: inherit!important
   }
+  .gallery-card {
+    position: relative
+  }
   .gallery-card__img {
-    border-radius: 3.25rem
+    border-radius: 2rem;
+    aspect-ratio: 750/800
   }
   .gallery-card__labels {
-    padding-top: 1.5rem;
-    gap: .75rem .5rem
+    padding-top: 1rem;
+    gap: .75rem .5rem;
+    position: absolute;
+    right: .625rem;
+    bottom: .625rem;
+    left: .625rem;
+    border-radius: 1.5rem;
+    padding: 1rem;
+    backdrop-filter: blur(.625rem)
   }
   .gallery-card__label {
-    font-size: 1rem;
-    height: 2.625rem;
+    font-size: .875rem;
+    height: 2rem;
     padding: .3125rem .9375rem;
     border-width: .0625rem
   }
@@ -1665,38 +1700,53 @@ body::after {
     top: auto;
     right: auto;
     width: 100%;
-    border-radius: 3.25rem;
-    padding: 1.125rem;
+    border-radius: 2rem;
+    padding: 1.125rem 1.125rem 2rem;
     height: auto;
-    padding-bottom: 5rem
+    margin-bottom: 1rem
   }
   .gallery-cardlg__top::after {
     background-size: 3rem;
-    width: 6.25rem;
-    left: 50%
+    width: 3.125rem;
+    left: 50%;
+    background-size: 2.5rem
   }
   .gallery-cardlg__head {
-    margin-bottom: 3rem
+    margin-bottom: 1rem
+  }
+  .gallery-cardlg__title {
+    font-size: 2rem
   }
   .gallery-cardlg__line {
-    gap: 1rem
+    gap: .75rem;
+    display: block
+  }
+  .gallery-cardlg__line>* {
+    display: inline-block;
+    font-size: 2.5rem!important
   }
   .gallery-cardlg__line-title {
-    font-size: 4rem;
+    font-size: 2rem;
     line-height: 1.25
   }
   .gallery-cardlg__line-text {
-    font-size: 1.25rem
+    font-size: 1rem
   }
   .gallery-cardlg__block {
     font-size: 1.25rem;
-    gap: 1rem
+    gap: .5rem
   }
   .gallery-cardlg__bottom {
     margin-right: 0
   }
   .gallery-cardlg__img {
-    border-radius: 3.25rem
+    border-radius: 2rem;
+    aspect-ratio: 750/800;
+    height: auto
+  }
+  .gallery-cardlg__text {
+    font-size: 1rem;
+    line-height: 120%
   }
 }
 @media (max-width:47.99875em)and (any-hover:none) {
@@ -1706,7 +1756,7 @@ body::after {
 }
 @media (max-width:47.998125em) {
   .gallery-cardlg__stars img {
-    width: 1.875rem
+    width: 1.25rem
   }
 }
 @media (any-hover:hover) {
