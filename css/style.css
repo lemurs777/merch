@@ -1635,7 +1635,7 @@ body::after {
     background-size: 3.75rem
   }
   .gallery {
-    border-radius: 2rem;
+    border-radius: 1rem;
     padding: .9375rem 0
   }
   .gallery__inner::after {
@@ -1679,14 +1679,17 @@ body::after {
     padding-top: 1rem;
     gap: .75rem .5rem;
     position: absolute;
-    right: .625rem;
-    bottom: .625rem;
-    left: .625rem;
+    bottom: 0;
+    left: 0;
     border-radius: 1.5rem;
-    padding: 1rem;
-    backdrop-filter: blur(.625rem)
+    padding: .625rem;
+    justify-content: center
   }
   .gallery-card__label {
+    backdrop-filter: blur(.625rem);
+    background-color: #8bc7ce;
+    color: #000;
+    font-weight: 600;
     font-size: .875rem;
     height: 2rem;
     padding: .3125rem .9375rem;
