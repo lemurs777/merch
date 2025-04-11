@@ -745,7 +745,7 @@ body::after {
   width: -moz-fit-content;
   width: -webkit-fit-content;
   width: fit-content;
-  margin: 0 auto 3.4375rem
+  margin: 0 auto 2rem
 }
 .steps__line {
   display: flex;
@@ -784,9 +784,6 @@ body::after {
 }
 .step-card:nth-child(4n) {
   flex: 0 0 100%;
-  color: #fff;
-  text-align: center;
-  background-color: #fd6036;
   padding: 3.75rem .9375rem
 }
 .step-card:nth-child(4n)::after {
@@ -827,7 +824,7 @@ body::after {
   margin: 0 auto
 }
 .collection {
-  margin: 10.3125rem 0 14.375rem
+  margin: 8.3125rem 0 12.375rem
 }
 .collection__container {
   max-width: 110rem
@@ -972,8 +969,6 @@ body::after {
 }
 .review-card:nth-child(3) {
   grid-column: span 2;
-  color: #fff;
-  background-color: #fd6036;
   position: relative
 }
 .review-card:nth-child(3)::before {
@@ -1214,6 +1209,25 @@ body::after {
 }
 .swiper-button-lock {
   display: none!important
+}
+@media (min-width:48em) {
+  .page__decor-wrapper {
+    zoom: .7
+  }
+  .step-card:nth-child(4n) {
+    background-color: #fd6036;
+    text-align: center;
+    color: #fff
+  }
+  .review-card:nth-child(3) {
+    color: #fff;
+    background-color: #fd6036
+  }
+}
+@media (min-width:64em) {
+  .gallery-cardlg__title {
+    font-size: 14.875rem
+  }
 }
 @media (min-width:75em) {
   .collection-pagination {
@@ -1547,13 +1561,13 @@ body::after {
     gap: 1rem
   }
   .steps__line .steps__title {
-    font-size: 6rem
+    font-size: 5rem
   }
   .steps__title {
     font-size: 5rem
   }
   .steps__text {
-    font-size: 1rem
+    font-size: .875rem
   }
   .step-card {
     padding: 1.125rem;
@@ -1561,22 +1575,27 @@ body::after {
     flex: 0 0 100%
   }
   .step-card:nth-child(4n) {
-    padding: 3rem .9375rem
+    padding: 2rem .9375rem
   }
   .step-card:nth-child(4n)::after {
     width: 5rem;
-    background-size: 3.75rem
+    background-size: 3.75rem;
+    display: none
   }
   .step-card:nth-child(5n),
   .step-card:nth-child(6n) {
     flex: 0 0 100%;
-    padding-top: 2.875rem
+    padding-top: 2rem
   }
   .step-card__title {
-    font-size: 2rem
+    font-size: 1.5rem;
+    margin-bottom: 1rem
+  }
+  .step-card__title br {
+    display: none
   }
   .step-card__text {
-    font-size: 1.125rem
+    font-size: 1rem
   }
   .collection {
     margin: 5rem 0
@@ -1618,10 +1637,10 @@ body::after {
     border-radius: 1.5rem
   }
   .review-card__title {
-    font-size: 2rem
+    font-size: 1.5rem
   }
   .review-card__text {
-    font-size: 1.125rem
+    font-size: 1rem
   }
   .review-card:nth-child(2) {
     padding-bottom: 2.8125rem
@@ -1632,7 +1651,8 @@ body::after {
   }
   .review-card:nth-child(3)::before {
     width: 5rem;
-    background-size: 3.75rem
+    background-size: 3.75rem;
+    display: none
   }
   .gallery {
     border-radius: 1rem;

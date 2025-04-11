@@ -3811,6 +3811,7 @@
             observer: true,
             observeParents: true,
             slidesPerView: 1,
+            spaceBetween: 10,
             speed: 800,
             pagination: {
                 el: ".reviews-swiper .swiper-pagination",
