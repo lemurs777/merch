@@ -786,25 +786,6 @@ body::after {
   flex: 0 0 100%;
   padding: 3.75rem .9375rem
 }
-.step-card:nth-child(4n)::after {
-  position: absolute;
-  content: "";
-  left: 50%;
-  translate: -50% 70%;
-  width: 8.625rem;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  padding: 1.25rem;
-  background: url(../img/decor.svg) center/4.375rem no-repeat,#000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  bottom: 0
-}
 .step-card:nth-child(5n),
 .step-card:nth-child(6n) {
   flex: 0 0 calc(50% - 1rem);
@@ -991,7 +972,6 @@ body::after {
 }
 .gallery {
   background-color: #000;
-  border-radius: 6.25rem;
   padding: 1.5rem
 }
 .gallery__container {
@@ -1278,7 +1258,9 @@ body::after {
     font-size: 18vw
   }
   .hero__girl {
-    width: 55rem
+    width: 55rem;
+    -webkit-transform: translateX(-57%) translateY(10%);
+    transform: translateX(-57%) translateY(10%)
   }
   .steps__line .steps__title {
     font-size: 15rem
@@ -1501,7 +1483,7 @@ body::after {
     font-size: 4rem
   }
   .hero__inner {
-    max-height: 31.25rem;
+    max-height: 29rem;
     padding-top: 6.25rem;
     display: flex;
     flex-direction: column;
@@ -1580,11 +1562,6 @@ body::after {
   .step-card:nth-child(4n) {
     padding: 2rem .9375rem
   }
-  .step-card:nth-child(4n)::after {
-    width: 5rem;
-    background-size: 3.75rem;
-    display: none
-  }
   .step-card:nth-child(5n),
   .step-card:nth-child(6n) {
     flex: 0 0 100%;
@@ -1661,7 +1638,6 @@ body::after {
     display: none
   }
   .gallery {
-    border-radius: 1rem;
     padding: .9375rem 0
   }
   .gallery__inner::after {
