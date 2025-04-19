@@ -843,7 +843,7 @@ body::after {
   aspect-ratio: 421/599;
   border-radius: 3rem;
   background-position: center;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
@@ -879,6 +879,7 @@ body::after {
   margin-top: auto;
   padding: .8125rem 1.75rem;
   background: #fff;
+  opacity: 0;
   border-radius: 2.3125rem
 }
 .reviews {
@@ -1757,8 +1758,8 @@ body::after {
     height: auto
   }
   .gallery-cardlg__text {
-    font-size: 1rem;
-    line-height: 120%
+    font-size: 1.25rem;
+    line-height: 1
   }
 }
 @media (max-width:47.99875em)and (any-hover:none) {
@@ -1768,7 +1769,7 @@ body::after {
 }
 @media (max-width:47.998125em) {
   .gallery-cardlg__stars img {
-    width: 1.25rem
+    width: 1.125rem
   }
 }
 @media (any-hover:hover) {
