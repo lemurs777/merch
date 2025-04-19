@@ -541,7 +541,9 @@ body::after {
   transition: .2s ease-in-out
 }
 .hero {
-  background: url(../img/hero-bg.webp) top/cover no-repeat
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center
 }
 .hero__inner {
   padding-top: 11.25rem;
@@ -549,14 +551,17 @@ body::after {
   height: 100vh;
   max-height: 69.75rem;
   max-width: 99.375rem;
-  margin: 0 auto
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column
 }
 .hero__title {
   font-weight: 900;
-  font-size: 20.9375rem;
+  font-size: 20rem;
   letter-spacing: -.02em;
   color: #0d0d0d;
   line-height: .7;
+  margin-bottom: 2rem;
   position: relative
 }
 .hero__title::after {
@@ -587,16 +592,20 @@ body::after {
 .hero__text {
   font-weight: 700;
   font-size: 3.1875rem;
-  line-height: 86%
+  line-height: 86%;
+  margin-top: auto;
+  margin-bottom: 3.125rem;
+  position: relative;
+  z-index: 1
 }
 .hero__girl {
   position: absolute;
   bottom: 0;
   left: 50%;
-  -webkit-transform: translateX(-50%) translateY(10%);
-  transform: translateX(-50%) translateY(10%);
+  -webkit-transform: translateX(-68%) translateY(10%);
+  transform: translateX(-68%) translateY(10%);
   aspect-ratio: 932/881;
-  width: 58.25rem;
+  width: 53rem;
   -webkit-animation-delay: .2s;
   animation-delay: .2s
 }
@@ -1255,12 +1264,12 @@ body::after {
     font-size: 13rem
   }
   .hero__title {
-    font-size: 18vw
+    font-size: 19vw
   }
   .hero__girl {
     width: 55rem;
-    -webkit-transform: translateX(-57%) translateY(10%);
-    transform: translateX(-57%) translateY(10%)
+    -webkit-transform: translateX(-60%) translateY(10%);
+    transform: translateX(-60%) translateY(10%)
   }
   .steps__line .steps__title {
     font-size: 15rem
@@ -1491,7 +1500,7 @@ body::after {
   }
   .hero__title::after {
     width: 6.25rem;
-    translate: 0 70%;
+    translate: 0 100%;
     z-index: 1
   }
   .hero__title img {
@@ -1499,6 +1508,9 @@ body::after {
   }
   .hero__title img {
     width: 2rem
+  }
+  .hero__title>div>div {
+    margin: 0 10% 0 auto
   }
   .hero__text {
     font-size: 1.5rem;
@@ -1526,7 +1538,7 @@ body::after {
     font-size: 1.125rem;
     border-radius: 1em 0;
     padding: 1rem 1.5rem;
-    bottom: 30%
+    bottom: 17%
   }
   .scroll-down {
     width: 1.5rem
